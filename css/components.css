@@ -1,0 +1,526 @@
+/* ==========================================================================
+   Buttons & Links
+   ========================================================================== */
+.btn-primary,
+.btn-pill-lemon {
+  min-height: 48px;
+  padding: 0 30px;
+  border-radius: var(--radius-pill);
+  background-color: var(--lemon);
+  color: var(--ink);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 15px;
+  letter-spacing: 0.03em;
+  text-decoration: none;
+  border: 1px solid transparent;
+  cursor: pointer;
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-fast);
+}
+
+.btn-primary:hover,
+.btn-pill-lemon:hover {
+  background-color: var(--magenta-ink);
+  color: #FFFFFF !important;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(240, 74, 174, 0.28);
+}
+
+/* Variante magenta (tarjeta destacada) — fondo más oscuro para texto blanco legible */
+.btn-pill-lemon--magenta {
+  background-color: var(--magenta-ink);
+  color: #FFFFFF;
+}
+
+.btn-pill-lemon--magenta:hover {
+  background-color: var(--magenta-ink);
+  color: #FFFFFF !important;
+  box-shadow: 0 8px 24px rgba(209, 6, 127, 0.32);
+}
+
+/* Botón que ocupa todo el ancho de su contenedor */
+.btn-block {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.btn-pill-wine {
+  min-height: 48px;
+  padding: 0 30px;
+  border-radius: var(--radius-pill);
+  background-color: var(--wine);
+  color: #FFF8D5;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 15px;
+  letter-spacing: 0.03em;
+  text-decoration: none;
+  transition: all var(--transition-fast);
+  box-shadow: var(--shadow-sm);
+}
+
+.btn-pill-wine:hover {
+  background-color: var(--magenta-ink);
+  color: #FFFFFF;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-pill-outline {
+  min-height: 48px;
+  padding: 0 28px;
+  border-radius: var(--radius-pill);
+  background-color: transparent;
+  color: var(--ink);
+  border: 1.5px solid var(--ink);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-sans);
+  font-weight: 500;
+  font-size: 15px;
+  text-decoration: none;
+  transition: all var(--transition-fast);
+}
+
+.btn-pill-outline:hover {
+  background-color: var(--ink);
+  color: var(--ground);
+  transform: translateY(-2px);
+}
+
+.btn-link {
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--font-sans);
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 6px;
+  text-decoration-thickness: 1.5px;
+  color: var(--ink);
+  transition: all var(--transition-fast);
+}
+
+.btn-link:hover {
+  color: var(--magenta-ink);
+  text-decoration-thickness: 2.5px;
+}
+
+/* ==========================================================================
+   Language Selector Pill
+   ========================================================================== */
+.lang-switcher {
+  display: inline-flex;
+  background-color: rgba(27, 24, 24, 0.07);
+  padding: 3px;
+  border-radius: var(--radius-sm);
+  gap: 2px;
+}
+
+.lang-btn {
+  min-height: 36px;
+  padding: 0 14px;
+  border-radius: 6px;
+  font-family: var(--font-sans);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ink-soft);
+  background: transparent;
+  transition: all var(--transition-fast);
+}
+
+.lang-btn:hover {
+  color: var(--ink);
+}
+
+.lang-btn.active {
+  background-color: var(--ink);
+  color: #FFF8D5;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+/* ==========================================================================
+   Navigation
+   ========================================================================== */
+.nav-link {
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--ink-soft);
+  position: relative;
+  transition: color var(--transition-fast);
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 8px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--magenta);
+  transition: width var(--transition-fast);
+}
+
+.nav-link:hover {
+  color: var(--ink);
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.nav-toggle-btn {
+  display: none;
+  padding: 8px;
+  color: var(--ink);
+  border-radius: 8px;
+}
+
+/* ==========================================================================
+   Quote Banner Section
+   ========================================================================== */
+.quote-banner {
+  background-color: var(--ground-card);
+  border-radius: var(--radius-xl);
+  padding: clamp(48px, 6vw, 84px) clamp(24px, 5vw, 64px);
+  text-align: center;
+  margin: 64px auto;
+  border: 1px solid rgba(27, 24, 24, 0.06);
+  box-shadow: var(--shadow-md);
+}
+
+.quote-banner-text {
+  margin: 0 auto;
+  max-width: 34ch;
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: clamp(32px, 4.2vw, 56px);
+  line-height: 1.2;
+  color: var(--ink);
+}
+
+.quote-banner-text strong {
+  color: var(--magenta);
+  font-weight: inherit;
+}
+
+/* ==========================================================================
+   Filter Tabs & Gallery Cards
+   ========================================================================== */
+.gallery-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 36px;
+}
+
+.filter-btn {
+  padding: 10px 22px;
+  border-radius: var(--radius-pill);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--ink-soft);
+  border: 1px solid rgba(27, 24, 24, 0.18);
+  background-color: transparent;
+  transition: all var(--transition-fast);
+}
+
+.filter-btn:hover {
+  border-color: var(--ink);
+  color: var(--ink);
+}
+
+.filter-btn.active {
+  background-color: var(--ink);
+  color: #FFF8D5;
+  border-color: var(--ink);
+}
+
+.tile {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 32px;
+  box-sizing: border-box;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform var(--transition-medium), box-shadow var(--transition-medium);
+}
+
+.tile:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+}
+
+.tile-bg-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-slow);
+}
+
+.tile:hover .tile-bg-img {
+  transform: scale(1.06);
+}
+
+.tile-overlay {
+  position: absolute;
+  inset: 0;
+  transition: opacity var(--transition-fast);
+}
+
+.tile-theme-wine .tile-overlay {
+  background: linear-gradient(180deg, rgba(104, 0, 44, 0.2) 0%, rgba(27, 24, 24, 0.9) 100%);
+}
+
+.tile-theme-blue .tile-overlay {
+  background: linear-gradient(180deg, rgba(166, 201, 221, 0.25) 0%, rgba(27, 24, 24, 0.9) 100%);
+}
+
+.tile-theme-pink .tile-overlay {
+  background: linear-gradient(180deg, rgba(240, 74, 174, 0.28) 0%, rgba(27, 24, 24, 0.9) 100%);
+}
+
+.tile-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  color: #FFF8D5;
+}
+
+.tile-badge {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  letter-spacing: 0.04em;
+  opacity: 0.9;
+}
+
+.tile-title {
+  margin: 0;
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: clamp(38px, 4.2vw, 52px);
+  line-height: 1;
+  font-weight: 400;
+}
+
+.tile-more {
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  transition: text-decoration-thickness var(--transition-fast);
+}
+
+.photo-frame {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition-medium), box-shadow var(--transition-medium);
+  cursor: pointer;
+}
+
+.photo-frame:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.photo-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-slow);
+}
+
+.photo-frame:hover img {
+  transform: scale(1.05);
+}
+
+.photo-frame-caption {
+  position: absolute;
+  bottom: 16px;
+  left: 16px;
+  right: 16px;
+  padding: 8px 14px;
+  background: rgba(250, 248, 242, 0.9);
+  backdrop-filter: blur(8px);
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ink);
+  opacity: 0;
+  transform: translateY(6px);
+  transition: all var(--transition-fast);
+}
+
+.photo-frame:hover .photo-frame-caption {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ==========================================================================
+   Floating Action Buttons (WhatsApp & Instagram)
+   ========================================================================== */
+.floating-whatsapp {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  z-index: 99;
+  background-color: #25D366;
+  color: #FFFFFF;
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 24px rgba(37, 211, 102, 0.45);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+  text-decoration: none;
+}
+
+.floating-whatsapp:hover {
+  transform: scale(1.12);
+  box-shadow: 0 12px 32px rgba(37, 211, 102, 0.65);
+  color: #FFFFFF;
+}
+
+.floating-instagram {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  z-index: 99;
+  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+  color: #FFFFFF;
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 24px rgba(220, 39, 67, 0.38);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+  text-decoration: none;
+}
+
+.floating-instagram:hover {
+  transform: scale(1.12);
+  box-shadow: 0 12px 32px rgba(220, 39, 67, 0.55);
+  color: #FFFFFF;
+}
+
+/* ==========================================================================
+   Lightbox Modal
+   ========================================================================== */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  background-color: rgba(20, 16, 17, 0.94);
+  backdrop-filter: blur(14px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--transition-medium);
+}
+
+.lightbox.is-open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.lightbox-dialog {
+  position: relative;
+  max-width: 90vw;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.lightbox-image {
+  max-width: 85vw;
+  max-height: 75vh;
+  object-fit: contain;
+  border-radius: var(--radius-sm);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.5);
+}
+
+.lightbox-close-btn {
+  position: absolute;
+  top: -48px;
+  right: 0;
+  color: #FFFFFF;
+  font-size: 32px;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.12);
+  transition: background var(--transition-fast);
+}
+
+.lightbox-close-btn:hover {
+  background: rgba(255, 255, 255, 0.28);
+}
+
+.lightbox-nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #FFFFFF;
+  font-size: 28px;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.12);
+  transition: background var(--transition-fast);
+}
+
+.lightbox-nav-btn:hover {
+  background: rgba(255, 255, 255, 0.28);
+}
+
+.lightbox-prev-btn {
+  left: -64px;
+}
+
+.lightbox-next-btn {
+  right: -64px;
+}
+
+@media (max-width: 768px) {
+  .lightbox-prev-btn { left: 8px; }
+  .lightbox-next-btn { right: 8px; }
+  .lightbox-close-btn { top: 12px; right: 12px; }
+  .floating-instagram { bottom: 20px; right: 20px; width: 52px; height: 52px; }
+
+}

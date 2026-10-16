@@ -1,0 +1,525 @@
+/* ==========================================================================
+   Header & Navigation
+   ========================================================================== */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: rgba(250, 248, 242, 0.94);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(27, 24, 24, 0.08);
+  transition: all var(--transition-fast);
+}
+
+.site-header-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 18px clamp(20px, 4vw, 48px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.site-logo {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 32px;
+  line-height: 1;
+  text-decoration: none;
+  color: var(--ink);
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  letter-spacing: -0.02em;
+  transition: color var(--transition-fast);
+}
+
+.site-logo:hover {
+  color: var(--magenta);
+}
+
+.site-nav {
+  display: flex;
+  align-items: center;
+  gap: 8px 24px;
+}
+
+.nav-links-group {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.header-cta-group {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* ==========================================================================
+   Section Headers
+   ========================================================================== */
+.section-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 20px 48px;
+  margin-bottom: 40px;
+}
+
+.section-tag {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--magenta-ink);
+  font-weight: 600;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.section-title {
+  margin: 0;
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 400;
+  font-size: clamp(40px, 5.2vw, 76px);
+  line-height: 1.05;
+  color: var(--ink);
+}
+
+.section-subtitle {
+  margin: 0;
+  max-width: 40ch;
+  text-align: right;
+  color: var(--ink-soft);
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+/* ==========================================================================
+   Gallery Section
+   ========================================================================== */
+.gallery-section {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: clamp(48px, 6vw, 96px) clamp(20px, 4vw, 48px);
+}
+
+.gallery-grid-rows {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.gallery-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.tile-w5 {
+  flex: 5 1 320px;
+  min-width: 0;
+  min-height: 500px;
+}
+
+.tile-w7 {
+  flex: 7 1 420px;
+  min-width: 0;
+  min-height: 500px;
+}
+
+.tile-h-compact {
+  min-height: 420px;
+}
+
+/* Photo showcase strip */
+.showcase-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 24px;
+}
+
+.showcase-col-1 {
+  flex: 1 1 260px;
+  min-width: 0;
+  height: 420px;
+}
+
+.showcase-col-2 {
+  flex: 1 1 260px;
+  min-width: 0;
+  height: 540px;
+}
+
+.showcase-col-3 {
+  flex: 1 1 260px;
+  min-width: 0;
+  height: 380px;
+}
+
+/* ==========================================================================
+   About Section (Sobre mí)
+   ========================================================================== */
+.about-section {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: clamp(48px, 6vw, 96px) clamp(20px, 4vw, 48px);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 56px;
+}
+
+.about-image-col {
+  flex: 1 1 420px;
+  min-width: 0;
+  min-height: 520px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-image-col .photo-frame {
+  width: 100%;
+  height: 100%;
+  min-height: 480px;
+}
+
+.about-content-col {
+  flex: 1 1 500px;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.about-bio {
+  margin: 0;
+  font-size: clamp(19px, 2vw, 24px);
+  line-height: 1.55;
+  color: var(--ink);
+  font-family: var(--font-serif);
+  font-style: italic;
+}
+
+.about-features {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.about-card {
+  background-color: var(--ground-card);
+  border-radius: var(--radius-md);
+  padding: 22px 26px;
+  border: 1px solid rgba(27, 24, 24, 0.08);
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition-fast), border-color var(--transition-fast);
+}
+
+.about-card:hover {
+  transform: translateX(6px);
+  border-color: var(--magenta);
+}
+
+.about-card h3 {
+  margin: 0 0 6px;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.about-card p {
+  margin: 0;
+  color: var(--ink-soft);
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+/* ==========================================================================
+   Contact Section
+   ========================================================================== */
+.contact-section {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: clamp(32px, 5vw, 64px) clamp(20px, 4vw, 48px) clamp(32px, 4vw, 56px);
+}
+
+.contact-wrapper {
+  background-color: var(--wine);
+  color: #FFF8D5;
+  border-radius: var(--radius-xl);
+  padding: clamp(36px, 6vw, 76px);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 40px 64px;
+  box-shadow: var(--shadow-lg);
+}
+
+.contact-text-col {
+  flex: 1 1 400px;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.contact-title {
+  margin: 0;
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 400;
+  font-size: clamp(52px, 7.5vw, 110px);
+  line-height: 0.95;
+}
+
+.contact-desc {
+  margin: 0;
+  max-width: 40ch;
+  font-size: 19px;
+  line-height: 1.6;
+  opacity: 0.92;
+}
+
+.contact-card-col {
+  flex: 1 1 340px;
+  min-width: 0;
+}
+
+.contact-card {
+  background-color: #FFF8D5;
+  color: var(--ink);
+  border-radius: var(--radius-lg);
+  padding: clamp(24px, 4vw, 36px);
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  box-shadow: var(--shadow-md);
+}
+
+.contact-item-label {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--ink-faint);
+  font-family: var(--font-mono);
+  margin-bottom: 4px;
+}
+
+.contact-item-value {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--ink);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.contact-item-value a {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  transition: color var(--transition-fast);
+}
+
+.contact-item-value a:hover {
+  color: var(--magenta-ink);
+}
+
+.contact-copy-btn {
+  padding: 6px 12px;
+  font-size: 12px;
+  border-radius: 6px;
+  background-color: rgba(27, 24, 24, 0.08);
+  color: var(--ink);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.contact-copy-btn:hover {
+  background-color: var(--ink);
+  color: #FFF8D5;
+}
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+.site-footer {
+  position: relative;
+  overflow: hidden;
+  height: 480px;
+  text-align: center;
+  background-color: var(--blue);
+}
+
+.footer-circle {
+  position: absolute;
+  left: 50%;
+  border: 1px solid rgba(104, 0, 44, 0.5);
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translateX(-50%);
+  animation: pulse-ring 8s ease-in-out infinite alternate;
+}
+
+.circle-1 {
+  top: -30px;
+  width: 1000px;
+  height: 1000px;
+  animation-delay: 0s;
+}
+
+.circle-2 {
+  top: 70px;
+  width: 800px;
+  height: 800px;
+  animation-delay: 1s;
+}
+
+.circle-3 {
+  top: 170px;
+  width: 600px;
+  height: 600px;
+  animation-delay: 2s;
+}
+
+.circle-4 {
+  top: 270px;
+  width: 400px;
+  height: 400px;
+  animation-delay: 3s;
+}
+
+@keyframes pulse-ring {
+  0% {
+    transform: translateX(-50%) scale(1);
+    opacity: 0.45;
+  }
+
+  100% {
+    transform: translateX(-50%) scale(1.02);
+    opacity: 0.8;
+  }
+}
+
+.footer-content {
+  position: relative;
+  height: 100%;
+  padding: 0 24px 56px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 8px;
+  z-index: 2;
+}
+
+.footer-name {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 54px;
+  line-height: 1;
+  color: var(--ink);
+}
+
+.footer-tagline {
+  margin: 0;
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 24px;
+  color: var(--ink-soft);
+}
+
+.footer-location {
+  margin: 0;
+  font-size: 15px;
+  color: var(--ink-soft);
+}
+
+/* ==========================================================================
+   Responsive Adaptations
+   ========================================================================== */
+@media (max-width: 900px) {
+  .section-subtitle {
+    text-align: left;
+  }
+
+  .about-section {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-links-group {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: var(--ground);
+    padding: 24px clamp(20px, 4vw, 48px);
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    box-shadow: var(--shadow-md);
+    border-bottom: 1px solid rgba(27, 24, 24, 0.12);
+  }
+
+  .nav-links-group.is-open {
+    display: flex;
+  }
+
+  .nav-toggle-btn {
+    display: inline-flex;
+  }
+
+  /* Mobile header: drop the inline WhatsApp CTA (a floating WhatsApp button is
+     always on screen) and slim the logo so the language pill + menu button fit
+     within the viewport without overflowing. */
+  .site-header-inner {
+    gap: 12px;
+  }
+
+  .site-logo {
+    font-size: 26px;
+  }
+
+  .header-cta-group .btn-pill-lemon {
+    display: none;
+  }
+
+  .header-cta-group {
+    gap: 8px;
+  }
+
+  .site-nav {
+    gap: 8px;
+  }
+
+  .tile-w5,
+  .tile-w7 {
+    min-height: 400px;
+  }
+
+  /* Contact items: long values (email/phone) + copy button must wrap instead of
+     pushing the button outside the card. */
+  .contact-item-value {
+    flex-wrap: wrap;
+    min-width: 0;
+    row-gap: 8px;
+    font-size: 16px;
+  }
+
+  .contact-item-value span,
+  .contact-item-value a {
+    min-width: 0;
+    overflow-wrap: anywhere;
+  }
+}

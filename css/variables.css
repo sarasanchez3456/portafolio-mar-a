@@ -1,0 +1,45 @@
+:root {
+  /* Color Palette — Refined & Inspired by LauTahust */
+  --ground: #FAF8F2;
+  --ground-card: #FFFFFF;
+  --ink: #1B1818;
+  --ink-soft: rgba(27, 24, 24, 0.76);
+  --ink-faint: rgba(27, 24, 24, 0.52);
+
+  /* Signature Accent Colors */
+  --wine: #68002C;
+  --magenta: #F04AAE;
+  /* Versión oscura para texto pequeño y fondos con texto blanco (WCAG AA ≥ 4.5:1) */
+  --magenta-ink: #D1067F;
+  --lemon: #E5E8B3;
+  --lavender: #DBD9FF;
+  --blue: #A6C9DD;
+  --pink: #E098AC;
+  --accent: #E5E8B3;
+
+  /* Surfaces & Shadows */
+  --surface-overlay: rgba(27, 24, 24, 0.92);
+  --shadow-sm: 0 4px 14px rgba(27, 24, 24, 0.05);
+  --shadow-md: 0 14px 32px rgba(27, 24, 24, 0.08);
+  --shadow-lg: 0 24px 54px rgba(27, 24, 24, 0.12);
+
+  /* Typography */
+  --font-serif: 'Cormorant Garamond', Georgia, serif;
+  --font-sans: 'Poppins', 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'IBM Plex Mono', Menlo, Monaco, monospace;
+
+  /* Radii & Spacing */
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-xl: 36px;
+  --radius-pill: 9999px;
+
+  /* Transitions */
+  --transition-fast: 0.22s cubic-bezier(0.2, 0.8, 0.2, 1);
+  --transition-medium: 0.38s cubic-bezier(0.2, 0.8, 0.2, 1);
+  --transition-slow: 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+
+  /* Layout */
+  --max-width: 1320px;
+}
